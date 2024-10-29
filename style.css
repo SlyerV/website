@@ -7,7 +7,7 @@ body {
    background-repeat: no-repeat;
    background-position: center center;  
 }
-div h1 {
+.h1 {
   margin-left: 20%;
   margin-right: 20%;
   font-family: Georgia, serif;
@@ -16,12 +16,13 @@ div h1 {
   background-color: red;
   color: white;
 }
-div p1 {
+.balance {
+  text-wrap: balance
   margin-left: 20%;
   margin-right: 20%;
   font-family: DejaVu Sans Mono, monospace;
   border-style: solid;
   border-radius: 18px;
-  background-color: cyan;
+  background-color: blue;
   color: white;
 }
