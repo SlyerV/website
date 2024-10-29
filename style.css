@@ -19,7 +19,7 @@ div h1 {
 }
 div p1 {
   text-wrap: balance;
-  white-space: nowrap;
+  white-space: normal;
   width: 320px;
   height: 50px;
   padding: 10px;
