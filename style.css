@@ -22,8 +22,6 @@ div p1 {
   font-family: DejaVu Sans Mono, monospace;
   border-style: solid;
   border-radius: 18px;
-  background-color: blue;
+  background-color: cyan;
   color: white;
-  text-wrap: pretty;
-  word-wrap: break-word
 }
