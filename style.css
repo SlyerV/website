@@ -17,7 +17,8 @@ div h1 {
   background-color: red;
   color: white;
 }
-div span {
+div p1 {
+  display:inline;
   text-wrap: balance;
   white-space: normal;
   width: 320px;
