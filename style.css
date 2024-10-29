@@ -21,6 +21,8 @@ div p1 {
   display: inline-block;
   text-wrap: balance;
   white-space: normal;
+  margin-left: 20%;
+  margin-right: 20%;
   font-family: DejaVu Sans Mono, monospace;
   border-style: solid;
   border-color: black;
