@@ -17,8 +17,9 @@ div h1 {
   background-color: red;
   color: white;
 }
-div balance {
+div p1 {
   text-wrap: balance;
+  white-space: nowrap;
   width: 320px;
   height: 50px;
   padding: 10px;
