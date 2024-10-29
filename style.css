@@ -10,7 +10,7 @@ body {
 div h1 {
   margin-left: 20%;
   margin-right: 20%;
-  font-family: cursive;
+  font-family: Georgia, serif;
   border-style: solid;
   border-radius: 18px;
   background-color: red;
@@ -19,9 +19,11 @@ div h1 {
 div p1 {
   margin-left: 20%;
   margin-right: 20%;
-  font-family: cursive;
+  font-family: DejaVu Sans Mono, monospace;
   border-style: solid;
   border-radius: 18px;
   background-color: blue;
   color: white;
+  text-wrap: pretty;
+  word-wrap: break-word
 }
