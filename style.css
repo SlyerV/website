@@ -2,12 +2,14 @@ html {
   
 }
 body {
-   background-image: url('sitebg.jpg');
+   background-image: url('IMG_2220.jpg');
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center center;  
 }
 div h1 {
+  margin-left: 20%;
+  margin-right: 20%;
   font-family: cursive;
   border-style: solid;
   border-radius: 18px;
@@ -15,6 +17,8 @@ div h1 {
   color: white;
 }
 div p1 {
+  margin-left: 20%;
+  margin-right: 20%;
   font-family: cursive;
   border-style: solid;
   border-radius: 18px;
