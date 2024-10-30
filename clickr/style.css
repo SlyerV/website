@@ -10,7 +10,7 @@ div h1 {
   font-family: cursive;
   border-style: solid;
   border-radius: 18px;
-  background-color: blue;
+  background-color: purple;
   color: white;
 }
 div h2 {
@@ -56,8 +56,8 @@ div h2 {
 .stats {
   font-size: 18px;
   font-family: cursive;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20px;
+  margin-right: 20%;
   text-align: center;
   border-style: solid;
   background-color: orange;
