@@ -90,6 +90,7 @@ function increase() {
   update()
 }
 function reset() {
+  alert("Are you sure you want to reset all of your progress?")
   clicks = 0
   mIncr = 1
   mCost = 20
