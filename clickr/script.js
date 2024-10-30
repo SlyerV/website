@@ -90,15 +90,16 @@ function increase() {
   update()
 }
 function reset() {
-  confirm("Are you sure you want to reset all of your progress?")
-  clicks = 0
-  mIncr = 1
-  mCost = 20
-  aCost = 100
-  aIncr = 0
-  mLevel = 0
-  aLevel = 0
-  update()
+  if (confirm("Are you sure you want to reset all of your progress?")) {
+      clicks = 0
+      mIncr = 1
+      mCost = 20
+      aCost = 100
+      aIncr = 0
+      mLevel = 0
+      aLevel = 0
+      update()
+  }
 }
 function manbuy() {
   if ((clicks > (mCost-1)) && (mIncrs[mLevel] != "MAX")) {
