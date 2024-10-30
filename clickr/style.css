@@ -3,6 +3,10 @@ html {
   width: 100%;
   background-color: #a7a5a5;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 div h1 {
   text-align: center;
   margin-left: 20%;
