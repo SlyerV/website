@@ -71,6 +71,10 @@ function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
+  alert(mCost)
+  alert(aCost)
+  alert(mLevel)
+  alert(aLevel)
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
   document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
