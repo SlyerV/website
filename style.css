@@ -1,28 +1,29 @@
 html {
-  height: 100%;
-  width: 100%;
-  background-color: lightblue;
 }
-h1 {
-  text-align: center;
+body {
+  background-image: url("IMG_2220.jpg");
+  background-size: cover;
+  background-repeat: no-repeat
+  background-position: center center;
 }
-#manup {
-  background-color: red;
+div h1 {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: Georgia, serif;
+  border-style: solid;
+  border-radius: 18px
+  border-color: black;
+  color: white
 }
-#autoup {
-  background-color: red;
-}
-#manup:hover {
-  background-color: #FF5F5F;
-}
-#autoup:hover {
-  background-color: #FF5F5F;
-}
-.button {
-  background-color: seagreen;
-  color: white;
-  transition-duration: 0.2s;
-}
-#clicker:hover {
-  background-color: #00CC00;
+div p1 {
+  display: inline-block;
+  text-wrap: balance;
+  white-space: normal;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: DejaVu Sans Mono, monospace;
+  border-style: solid;
+  border-color: black;
+  border-radius: 18px;
+  background-color: blue
 }
