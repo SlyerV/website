@@ -12,6 +12,9 @@ let mChanged = false
 let aChanged = false
 let mLevel = 0
 let aLevel = 0
+alert(localStorage.getItem('clicks'))
+alert(localStorage.getItem('mCost'))
+alert(localStorage.getItem('aCost'))
 if (localStorage.getItem('clicks')!=null) {
   clicks = Number(localStorage.getItem('clicks'))
 }
