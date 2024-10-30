@@ -55,10 +55,11 @@ figcaption {
   backdrop-filter: blur(10px) saturate(70%);
   display:inline-block;
   padding-bottom: 5px;
+  clear:both;
 }
 #navbar {
   width: 100%;
-  padding-top: 5px;
+  margin-top: -5px;
   border-bottom-style: dotted;
   border-bottom-color: black;
   background-color: dimgray;
@@ -70,4 +71,7 @@ figcaption {
   color: white;
   font-family: DejaVu Sans Mono, monospace;
   display:inline-block;
+}
+img {
+  clear:both;
 }
