@@ -12,9 +12,6 @@ let mChanged = false
 let aChanged = false
 let mLevel = 0
 let aLevel = 0
-alert(localStorage.getItem('clicks'))
-alert(localStorage.getItem('mCost'))
-alert(localStorage.getItem('aCost'))
 if (localStorage.getItem('clicks')!=null) {
   clicks = Number(localStorage.getItem('clicks'))
 }
@@ -90,6 +87,16 @@ function aOffHover() {
 function increase() {
   clicks = clicks+mIncr
   sfxClick.play()
+  update()
+}
+function reset() {
+  clicks = 0
+  mIncr = 1
+  mCost = 20
+  aCost = 100
+  aIncr = 0
+  mLevel = 0
+  aLevel = 0
   update()
 }
 function manbuy() {
