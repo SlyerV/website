@@ -3,7 +3,7 @@ html {
 body {
   background-image: url("IMG_2220.jpg");
   background-size: cover;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
   background-position: center center;
 }
 div h1 {
@@ -13,7 +13,8 @@ div h1 {
   border-style: solid;
   border-radius: 18px
   border-color: black;
-  color: white
+  color: white;
+  background-color: red;
 }
 div p1 {
   display: inline-block;
@@ -25,5 +26,6 @@ div p1 {
   border-style: solid;
   border-color: black;
   border-radius: 18px;
-  background-color: blue
+  background-color: blue;
+  color: white;
 }
