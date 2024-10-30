@@ -5,6 +5,8 @@ html {
 }
 body {
   margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding: 0;
 }
 div h1 {
