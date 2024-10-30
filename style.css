@@ -3,10 +3,11 @@ html {
   width: 100%;
 }
 body {
-  background-image: url("IMG_2220.jpg");
+/*   background-image: url("IMG_2220.jpg");
   background-size: cover;
   background-repeat: repeat-y;
-  background-position: center center;
+  background-position: center center; */
+  background-color: #E6E8E6;
   margin-top: 5px;
   margin-left: 0px;
   margin-right: 0px;
