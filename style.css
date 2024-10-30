@@ -21,11 +21,11 @@ div h1 {
 div h2 {
   backdrop-filter: blur(10px) saturate(70%);
   text-wrap: pretty;
-  display:inline;
+  display:inline-block;
   font-family: Georgia, serif;
-  border-style: solid;
+  border-style: dotted;
   border-color: black;
-  color: gray;
+  color: green;
 }
 div p1 {
   display: inline-block;
