@@ -45,6 +45,10 @@ div h2 {
   margin-left: 30%;
   margin-right: 30%;
 }
+#reset {
+  clear: both;
+  background-color: dark-red;
+}
 .upgrade {
   background-color: red;
   margin-left: 15%;
