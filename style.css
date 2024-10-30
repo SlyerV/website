@@ -20,7 +20,7 @@ div h1 {
   border-radius: 18px;
   border-color: black;
   color: white;
-  background-color: red;
+  background-color: #DF2935;
 }
 div h2 {
   width: 100%;
@@ -32,7 +32,7 @@ div h2 {
   font-weight: bold;
   display:inline-block;
   font-family: Lucida Console, Courier New, monospace;
-  color: whitesmoke;
+  color: #FDCA40;
 }
 div p1 {
   display: inline-block;
@@ -62,7 +62,7 @@ figcaption {
   margin-top: -5px;
   border-bottom-style: dotted;
   border-bottom-color: black;
-  background-color: dimgray;
+  background-color: #3772FF;
   color: white;
   font-family: DejaVu Sans Mono, monospace;
 }
