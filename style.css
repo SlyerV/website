@@ -18,6 +18,16 @@ div h1 {
   color: white;
   background-color: red;
 }
+div h2 {
+  backdrop-filter: blur(10px) saturate(70%);
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: Georgia, serif;
+  border-style: solid;
+  border-radius: 18px;
+  border-color: black;
+  color: white;
+}
 div p1 {
   display: inline-block;
   text-wrap: balance;
