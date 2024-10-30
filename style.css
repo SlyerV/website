@@ -20,13 +20,15 @@ div h1 {
 }
 div h2 {
   width: 100%;
-  background-color:lightgray;
+  background-color:gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-wrap: pretty;
   text-decoration: underline;
   font-weight: bold;
   display:inline-block;
   font-family: Lucida Console, Courier New, monospace;
-  color: LimeGreen;
+  color: whitesmoke;
 }
 div p1 {
   display: inline-block;
