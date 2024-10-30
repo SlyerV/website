@@ -19,8 +19,8 @@ div h1 {
   background-color: red;
 }
 div h2 {
-  margin-left: -600px;
-  margin-right: -600px;
+  backdrop-filter: blur(10px) saturate(70%);
+  display:inline;
   font-family: Georgia, serif;
   border-style: solid;
   border-radius: 18px;
