@@ -1,4 +1,6 @@
 html {
+  height: 100%;
+  width: 100%;
 }
 body {
   background-image: url("IMG_2220.jpg");
