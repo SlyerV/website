@@ -43,9 +43,6 @@ function autoclick() {
 async function setautoclick() {
   setInterval(autoclick,1000)
 }
-if (start) {
-  setautoclick()
-}
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
@@ -64,6 +61,24 @@ function update() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
+}
+function initupdate() {
+  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
+  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
+  document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mIncrs[mLevel])+")"
+  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
+  localStorage.setItem('clicks', clicks);
+  localStorage.setItem('aIncr', aIncr);
+  localStorage.setItem('mIncr',mIncr)
+  localStorage.setItem('aLevel',aLevel)
+  localStorage.setItem('mLevel',mLevel)
+  localStorage.setItem('aCost',aCost)
+  localStorage.setItem('mCost',mCost)
+  localStorage.setItem('start',start)
+  if (start) {
+    setautoclick()
+  }
 }
 function cHover() {
   sfxClick.load()
@@ -166,5 +181,5 @@ async function bgchange() {
   }
 }
 // INITIALIZATION
-update()
+initupdate()
 bgchange()
