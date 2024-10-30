@@ -39,9 +39,13 @@ div h2 {
   height: 150px;
   font-size: 50px;
   border-radius: 33%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 .upgrade {
   background-color: red;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 .upgrade:hover {
   background-color: #FF5F5F;
