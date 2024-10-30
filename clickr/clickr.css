@@ -1,0 +1,58 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #a7a5a5;
+}
+div h1 {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: cursive;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: blue;
+  color: white;
+}
+div h2 {
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-family: cursive;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: blue;
+  color: white;
+}
+.button {
+  background-color: seagreen;
+  color: white;
+  transition-duration: 0.2s;
+  font-family: cursive;
+  border-radius: 12px;
+  height: 33px;
+}
+#clicker {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 25%;
+  height: 150px;
+  font-size: 50px;
+  border-radius: 33%;
+}
+.upgrade {
+  background-color: red;
+}
+.upgrade:hover {
+  background-color: #FF5F5F;
+}
+.button:hover {
+  background-color: #00CC00;
+}
+.stats {
+  font-size: 18px;
+  font-family: cursive;
+  text-align: center;
+  border-style: solid;
+  background-color: orange;
+}
