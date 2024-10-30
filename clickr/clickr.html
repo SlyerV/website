@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Clickr</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div>
+    <h1> Clickr </h1>
+  </div>
+  <button
+    type="button"
+    class="button"
+    id=clicker  
+    onmousedown="increase()" 
+    onmouseover ="cHover()"
+    >Click Me!
+    </button>
+  <p class=stats id=clicks>Clicks: 0</p> 
+  <p class=stats id=mult>Multiplier: x1</p>
+  <p class=stats id=cps>CPS: 0</p>
+  <script src="script.js"></script>
+  <div>
+    <h2> Upgrades: </h2>
+  </div>
+  <button 
+    type="button" 
+    class="button" 
+    class="upgrade"
+    id=manup 
+    onclick="manbuy()" 
+    onmouseover="mOnHover()" 
+    onmouseleave="mOffHover()"
+    >Manual Upgrade! (Cost: 20, Multiplier: x1 → x2)
+  </button>
+  <button 
+    type="button" 
+    class="button" 
+    class="upgrade"
+    id=autoup 
+    onclick="autobuy()"
+    onmouseover="aOnHover()"
+    onmouseleave="aOffHover()"
+    >Auto Upgrade! (Cost: 100, CPS: 0 → 1)</button>
+</body>
+</html>
