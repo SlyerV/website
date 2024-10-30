@@ -21,8 +21,10 @@ div h1 {
 div h2 {
   backdrop-filter: blur(10px) saturate(70%);
   text-wrap: pretty;
+  text-decoration: underline;
+  font-weight: bold;
   display:inline-block;
-  font-family: Georgia, serif;
+  font-family: Lucida Console, Courier New, monospace;
   border-style: dotted;
   border-color: black;
   color: green;
