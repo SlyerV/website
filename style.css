@@ -19,7 +19,6 @@ div h1 {
   background-color: red;
 }
 div h2 {
-  backdrop-filter: blur(10px) saturate(70%);
   margin-left: 20%;
   margin-right: 20%;
   font-family: Georgia, serif;
@@ -38,6 +37,6 @@ div p1 {
   border-style: solid;
   border-color: black;
   border-radius: 18px;
-  background-color: blue;
+  backdrop-filter: blur(10px) saturate(70%);
   color: white;
 }
