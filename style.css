@@ -53,9 +53,14 @@ strong {
 figcaption {
   color: white;
   backdrop-filter: blur(10px) saturate(70%);
+  display:inline-block;
+  padding-bottom: 5px;
 }
 #navbar {
   width: 100%;
+  padding-top: 5px;
+  border-bottom-style: dotted;
+  border-bottom-color: black;
   background-color: dimgray;
   color: white;
   font-family: DejaVu Sans Mono, monospace;
@@ -64,4 +69,5 @@ figcaption {
   backdrop-filter: blur(10px) saturate(70%);
   color: white;
   font-family: DejaVu Sans Mono, monospace;
+  display:inline-block;
 }
