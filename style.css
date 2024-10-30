@@ -19,13 +19,12 @@ div h1 {
   background-color: red;
 }
 div h2 {
-  backdrop-filter: blur(10px) saturate(70%);
   text-wrap: pretty;
   text-decoration: underline;
   font-weight: bold;
   display:inline-block;
   font-family: Lucida Console, Courier New, monospace;
-  color: "#32CD32";
+  color: LimeGreen;
 }
 div p1 {
   display: inline-block;
