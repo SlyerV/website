@@ -27,7 +27,7 @@ div h2 {
   font-family: Lucida Console, Courier New, monospace;
   border-style: dotted;
   border-color: black;
-  color: green;
+  color: "#32CD32";
 }
 div p1 {
   display: inline-block;
