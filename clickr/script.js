@@ -2,7 +2,6 @@
 const sfxClick = new Audio("clicksfx.mp3") 
 const sfxLevelUp = new Audio("levelupsfx.mp3")
 // VARIABLES
-localStorage.setItem('mIncr',1)
 let clicks = 0
 let mIncr = 1
 let mCost = 20
