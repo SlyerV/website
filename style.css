@@ -3,12 +3,12 @@ html {
   width: 100%;
 }
 body {
-/*   background-image: url("IMG_2220.jpg");
+  background-image: url("IMG_2220.jpg");
   background-size: cover;
   background-repeat: repeat-y;
-  background-position: center center; */
-  background-color: burlywood;
-  margin-top: 5px;
+  background-position: center center;
+/*   background-color: burlywood;
+  margin-top: 5px; */
   margin-left: 0px;
   margin-right: 0px;
   padding: 0;
