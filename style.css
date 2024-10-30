@@ -19,6 +19,7 @@ div h1 {
   background-color: red;
 }
 div h2 {
+  background-color:lightgray;
   text-wrap: pretty;
   text-decoration: underline;
   font-weight: bold;
