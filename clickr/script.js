@@ -36,6 +36,13 @@ if (localStorage.getItem('mCost')!=null) {
 if (localStorage.getItem('start')!=null) {
   start = Number(localStorage.getItem('start'))
 }
+function autoclick() {
+  clicks = clicks+aIncr
+  update()
+}
+async function setautoclick() {
+  setInterval(autoclick,1000)
+}
 if (start) {
   setautoclick()
 }
@@ -105,6 +112,7 @@ function reset() {
       aIncr = 0
       mLevel = 0
       aLevel = 0
+      start = false
       update()
   }
 }
@@ -134,13 +142,6 @@ function autobuy() {
     }
   }
 }
-function autoclick() {
-  clicks = clicks+aIncr
-  update()
-}
-async function setautoclick() {
-  setInterval(autoclick,1000)
-}
 async function bgchange() {
   while (true) {
     await sleep(1)
@@ -164,6 +165,6 @@ async function bgchange() {
     }
   }
 }
-// OTHER STUFF
+// INITIALIZATION
 update()
 bgchange()
