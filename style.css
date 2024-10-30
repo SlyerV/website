@@ -47,3 +47,21 @@ div p1 {
   backdrop-filter: blur(10px) saturate(70%);
   color: white;
 }
+strong {
+  font-size: 50px;
+}
+figcaption {
+  color: white;
+  backdrop-filter: blur(10px) saturate(70%);
+}
+#navbar {
+  width: 100%;
+  background-color: dimgray;
+  color: white;
+  font-family: DejaVu Sans Mono, monospace;
+}
+#links {
+  backdrop-filter: blur(10px) saturate(70%);
+  color: white;
+  font-family: DejaVu Sans Mono, monospace;
+}
