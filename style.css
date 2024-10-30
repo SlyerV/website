@@ -19,13 +19,13 @@ div h1 {
   background-color: red;
 }
 div h2 {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: -600px;
+  margin-right: -600px;
   font-family: Georgia, serif;
   border-style: solid;
   border-radius: 18px;
   border-color: black;
-  color: white;
+  color: gray;
 }
 div p1 {
   display: inline-block;
