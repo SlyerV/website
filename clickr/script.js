@@ -12,6 +12,27 @@ let mChanged = false
 let aChanged = false
 let mLevel = 0
 let aLevel = 0
+if (localStorage.getItem('clicks')) {
+  clicks = localStorage.getItem('clicks')
+}
+if (localStorage.getItem('aIncr')) {
+  aIncr = localStorage.getItem('aIncr')
+}
+if (localStorage.getItem('mIncr')) {
+  mIncr = localStorage.getItem('mIncr')
+}
+if (localStorage.getItem('aLevel')) {
+  aLevel = localStorage.getItem('aLevel')
+}
+if (localStorage.getItem('mLevel')) {
+  mLevel = localStorage.getItem('mLevel')
+}
+if (localStorage.getItem('aCost')) {
+  aCost = localStorage.getItem('aCost')
+}
+if (localStorage.getItem('mCost')) {
+  mCost = localStorage.getItem('mCost')
+}
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
@@ -22,6 +43,13 @@ function update() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
   document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  localStorage.setItem('clicks', clicks);
+  localStorage.setItem('aIncr', aIncr);
+  localStorage.setItem('mIncr',mIncr)
+  localStorage.setItem('aLevel',aLevel)
+  localStorage.setItem('mLevel',mLevel)
+  localStorage.setItem('aCost',aCost)
+  localStorage.setItem('mCost',mCost)
 }
 function cHover() {
   sfxClick.load()
