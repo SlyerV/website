@@ -14,44 +14,47 @@
       <a href="../clickr/">Clickr</a>
     </nav>
   </center>
-  <div>
-    <h1> Clickr </h1>
-  </div>
-  <button
-    type="button"
-    class="button"
-    id=clicker  
-    onmousedown="increase()" 
-    onmouseover ="cHover()"
-    >Click Me!
-    </button>
-  <p class=stats id=clicks>Clicks: 0</p> 
-  <p class=stats id=mult>Multiplier: x1</p>
-  <p class=stats id=cps>CPS: 0</p>
-  <script src="script.js"></script>
-  <div>
-    <h2> Upgrades: </h2>
-  </div>
   <center>
-    <button 
-      type="button" 
-      class="button" 
-      class="upgrade"
-      id=manup 
-      onclick="manbuy()" 
-      onmouseover="mOnHover()" 
-      onmouseleave="mOffHover()"
-      >Manual Upgrade! (Cost: 20, Multiplier: x1 → x2)
+    <div>
+      <h1> Clickr </h1>
+    </div>
+    <button
+      type="button"
+      class="button"
+      id=clicker  
+      onmousedown="increase()" 
+      onmouseover ="cHover()"
+      >Click Me!
     </button>
-    <button 
-      type="button" 
-      class="button" 
-      class="upgrade"
-      id=autoup 
-      onclick="autobuy()"
-      onmouseover="aOnHover()"
-      onmouseleave="aOffHover()"
-      >Auto Upgrade! (Cost: 100, CPS: 0 → 1)</button>
+    <div>
+      <h2> Stats: </h2>
+    </div>
+    <p class=stats id=clicks>Clicks: 0</p> 
+    <p class=stats id=mult>Multiplier: x1</p>
+    <p class=stats id=cps>CPS: 0</p>
+    <script src="script.js"></script>
+    <div>
+      <h2> Upgrades: </h2>
+    </div>
+      <button 
+        type="button" 
+        class="button" 
+        class="upgrade"
+        id=manup 
+        onclick="manbuy()" 
+        onmouseover="mOnHover()" 
+        onmouseleave="mOffHover()"
+        >Manual Upgrade! (Cost: 20, Multiplier: x1 → x2)
+      </button>
+      <button 
+        type="button" 
+        class="button" 
+        class="upgrade"
+        id=autoup 
+        onclick="autobuy()"
+        onmouseover="aOnHover()"
+        onmouseleave="aOffHover()"
+        >Auto Upgrade! (Cost: 100, CPS: 0 → 1)</button>
     </center>
 </body>
 </html>
