@@ -107,9 +107,13 @@ function initupdate() {
     setautoclick()
   }
   if (mmStart) {
+    document.getElementById("multup").innerHTML = "MULTIPLIER PER SECOND: BOUGHT"
+    document.getElementById("multup").style.backgroundColor = "red"
     setautomult()
   }
   if (aaStart) {
+    document.getElementById("cpsup").innerHTML = "CPS PER SECOND: BOUGHT"
+    document.getElementById("cpsup").style.backgroundColor = "red"
     setautocps()
   }
 }
