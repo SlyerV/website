@@ -58,6 +58,11 @@ function update() {
   localStorage.setItem('start',start)
 }
 function initupdate() {
+  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
+  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
+  document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+mIncrs[mLevel]+")"
+  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+aIncrs[aLevel]+")"
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('aIncr', aIncr);
   localStorage.setItem('mIncr',mIncr)
@@ -66,11 +71,6 @@ function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
-  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
-  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
-  document.getElementById("cps").innerHTML = "CPS: "+aIncr
-  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+mIncrs[mLevel]+")"
-  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+aIncrs[aLevel]+")"
   if (start) {
     alert("Autoclick restored")
     setautoclick()
