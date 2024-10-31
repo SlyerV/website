@@ -64,7 +64,7 @@ function update() {
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
 }
-async function initupdate() {
+function initupdate() {
   alert("0")
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('aIncr', aIncr);
@@ -74,23 +74,11 @@ async function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
-  alert("1")
-  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
-  alert("2")
-  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
-  alert("3")
-  document.getElementById("cps").innerHTML = "CPS: "+aIncr
-  alert("4")
-  await document.getElementById("manup")
-  await document.getElementById("autoup")
-  alert(document.getElementById("manup"))
-  alert(document.getElementById("autoup"))
   try {
     document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
   } catch (err) {
     alert(err)
   }
-  alert("5")
   document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
   alert(mCost)
   alert(aCost)
@@ -202,5 +190,5 @@ async function bgchange() {
   }
 }
 // INITIALIZATION
-document.getElementById("manup").onload = initupdate()
+initupdate()
 bgchange()
