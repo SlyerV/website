@@ -117,6 +117,12 @@ function aOffHover() {
     document.getElementById("autoup").style.backgroundColor = "red"
   }
 }
+function rOnHover() {
+  document.getElementById("reset").style.backgroundColor = "#DB0000"
+}
+function rOffHover() {
+  document.getElementById("reset").style.backgroundColor = "darkred"
+}
 function increase() {
   clicks = clicks+mIncr
   sfxClick.play()
