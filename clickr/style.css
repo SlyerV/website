@@ -58,8 +58,9 @@ div h2 {
 }
 #reset {
   background-color: dark-red;
+  text-align; center;
   height: 100px;
-  width: 200px;
+  width: 300px;
   font-size: 50px;
   color: white;
   transition-duration: 0.2s;
