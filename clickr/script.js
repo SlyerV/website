@@ -103,11 +103,11 @@ function initupdate() {
   localStorage.setItem('aaStart',aaStart)
   localStorage.setItem('aaIncr', aaIncr)
   localStorage.setItem('mmIncr',mmIncr)
-  alert(mmStart)
   if (aStart) {
     setautoclick()
   }
   if (mmStart) {
+    alert(mmStart)
     document.getElementById("multup").innerHTML = "MULTIPLIER PER SECOND: BOUGHT"
     document.getElementById("multup").style.backgroundColor = "red"
     setautomult()
