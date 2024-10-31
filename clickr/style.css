@@ -21,9 +21,9 @@ body {
 div h1 {
   text-align: center;
   width: 100%;
-  font-family: cursive;
-  border-style: solid;
-  border-radius: 18px;
+  font-family: Blippo, fantasy;
+  border-top-style: solid;
+  border-bottom-style: solid;
   background-color: purple;
   color: white;
 }
@@ -31,7 +31,7 @@ div h2 {
   text-align: center;
   margin-left: 30%;
   margin-right: 30%;
-  font-family: cursive;
+  font-family: Georgia, serif;
   border-style: solid;
   border-radius: 18px;
   background-color: blue;
