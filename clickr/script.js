@@ -104,7 +104,13 @@ function initupdate() {
   localStorage.setItem('aaIncr', aaIncr)
   localStorage.setItem('mmIncr',mmIncr)
   if (aStart) {
-    setauto(click)
+    setautoclick()
+  }
+  if (mmStart) {
+    setautomult()
+  }
+  if (aaStart) {
+    setautocps()
   }
 }
 function click() {
@@ -119,8 +125,14 @@ function cps() {
   aIncr = aIncr+aaIncr
   update()
 }
-async function setauto(func) {
-  setInterval(func,1000)
+async function setautoclick() {
+  setInterval(click,1000)
+}
+async function setautomult() {
+  setInterval(mult,1000)
+}
+async function setautocps() {
+  setInterval(cps,1000)
 }
 function cHover() {
   sfxClick.load()
@@ -186,7 +198,7 @@ function autobuy() {
       update()
       if (!aStart) {
         aStart = true
-        setauto(click)
+        setautoclick()
       }
     }
   } catch (err) {
@@ -202,7 +214,7 @@ function multbuy() {
       update()
       if (!mmStart) {
         mmStart = true
-        setauto(mult)
+        setautomult()
       }
     }
   } catch (err) {
@@ -218,7 +230,7 @@ function cpsbuy() {
       update()
       if (!aaStart) {
         aaStart = true
-        setauto(cps)
+        setautocps()
       }
     }
   } catch (err) {
