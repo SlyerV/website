@@ -12,6 +12,10 @@ let mChanged = false
 let aChanged = false
 let mLevel = 0
 let aLevel = 0
+let mmStart = false
+let aaStart = false
+let mmIncr = 1
+let aaIncr = 1
 if (localStorage.getItem('clicks')!=null) {
   clicks = Number(localStorage.getItem('clicks'))
 }
@@ -76,15 +80,23 @@ function initupdate() {
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('aStart',aStart)
   if (aStart) {
-    setautoclick()
+    setauto(click)
   }
 }
-function autoclick() {
+function click() {
   clicks = clicks+aIncr
   update()
 }
-async function setautoclick() {
-  setInterval(autoclick,1000)
+function mult() {
+  mIncr = mIncr+mmIncr
+  update()
+}
+function cps() {
+  aIncr = aIncr+aaIncr
+  update()
+}
+async function setauto(func) {
+  setInterval(func,1000)
 }
 function cHover() {
   sfxClick.load()
@@ -164,7 +176,7 @@ function autobuy() {
       update()
       if (!aStart) {
         aStart = true
-        setautoclick()
+        setauto(click)
       }
     }
   } catch (err) {
