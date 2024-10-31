@@ -48,8 +48,8 @@ const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 10000
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
 const mIncrs = [2, 3, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 10000, "MAX LEVEL"]
 const aIncrs = [1, 2, 5, 10, 50, 100, 1000, 10000, "MAX LEVEL"]
-// const mNext = mIncrs[mLevel]
-// const aNext = aIncrs[aLevel]
+const mNext = mIncrs[mLevel]
+const aNext = aIncrs[aLevel]
 // FUNCTIONS
 function update() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
@@ -82,7 +82,7 @@ function initupdate() {
   alert("4")
   document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
   alert("5")
-  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext])+")"
+  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
   alert(mCost)
   alert(aCost)
   alert(mLevel)
