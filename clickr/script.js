@@ -36,13 +36,6 @@ if (localStorage.getItem('mCost')!=null) {
 if (localStorage.getItem('start')!=null) {
   start = Number(localStorage.getItem('start'))
 }
-function autoclick() {
-  clicks = clicks+aIncr
-  update()
-}
-async function setautoclick() {
-  setInterval(autoclick,1000)
-}
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
@@ -82,6 +75,13 @@ function initupdate() {
     alert("Autoclick restored")
     setautoclick()
   }
+}
+function autoclick() {
+  clicks = clicks+aIncr
+  update()
+}
+async function setautoclick() {
+  setInterval(autoclick,1000)
 }
 function cHover() {
   sfxClick.load()
