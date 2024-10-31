@@ -202,5 +202,5 @@ async function bgchange() {
   }
 }
 // INITIALIZATION
-window.onload = initupdate()
+document.getElementById("manup").onload = initupdate()
 bgchange()
