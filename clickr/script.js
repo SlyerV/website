@@ -166,6 +166,7 @@ function autobuy() {
       } else {
         update()
       }
+      alert(start)
     }
   } catch (err) {
     alert(err)
