@@ -273,7 +273,7 @@ async function bgchange() {
         aChanged = true
       }
     }
-    if (!mmStart) {
+    if (!(mmStart==true)) {
       if ((clicks >= mmCost) && (mmChanged == true)) {
         document.getElementById("multup").style.backgroundColor = "seagreen";
         mmChanged = false
@@ -284,7 +284,7 @@ async function bgchange() {
         }
       }
     }
-    if (!aaStart) {
+    if (!(aaStart==true)) {
       if ((clicks >= aaCost) && (aaChanged == true)) {
         document.getElementById("cpsup").style.backgroundColor = "seagreen";
         aaChanged = false
