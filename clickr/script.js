@@ -48,8 +48,6 @@ const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 10000
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
 const mIncrs = [2, 3, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 10000, "MAX LEVEL"]
 const aIncrs = [1, 2, 5, 10, 50, 100, 1000, 10000, "MAX LEVEL"]
-const mNext = mIncrs[mLevel]
-const aNext = aIncrs[aLevel]
 // FUNCTIONS
 function update() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
@@ -78,8 +76,8 @@ function initupdate() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
   document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
-  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
-  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
+  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+mIncrs[mLevel]+")"
+  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+aIncrs[aLevel]+")"
   if (start) {
     alert("Autoclick restored")
     setautoclick()
@@ -158,6 +156,7 @@ function autobuy() {
     update()
     if (start == false) {
       start = true
+      alert("start = true")
       setautoclick()
     }
   }
