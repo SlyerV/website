@@ -81,7 +81,6 @@ function update() {
     localStorage.setItem('aaStart',aaStart)
     localStorage.setItem('aaIncr', aaIncr)
     localStorage.setItem('mmIncr',mmIncr)
-    alert(mmStart)
   } catch (err) {
     alert(err)
   }
