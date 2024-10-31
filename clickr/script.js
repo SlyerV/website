@@ -7,7 +7,7 @@ let mIncr = 1
 let mCost = 20
 let aCost = 100
 let aIncr = 0
-let start = false
+let aStart = false
 let mChanged = false
 let aChanged = false
 let mLevel = 0
@@ -33,8 +33,8 @@ if (localStorage.getItem('aCost')!=null) {
 if (localStorage.getItem('mCost')!=null) {
   mCost = Number(localStorage.getItem('mCost'))
 }
-if (localStorage.getItem('start')!=null) {
-  start = localStorage.getItem('start')
+if (localStorage.getItem('aStart')!=null) {
+  aStart = localStorage.getItem('aStart')
 }
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
@@ -56,7 +56,7 @@ function update() {
     localStorage.setItem('mLevel',mLevel)
     localStorage.setItem('aCost',aCost)
     localStorage.setItem('mCost',mCost)
-    localStorage.setItem('start',start)
+    localStorage.setItem('aStart',aStart)
   } catch (err) {
     alert(err)
   }
@@ -74,8 +74,8 @@ function initupdate() {
   localStorage.setItem('mLevel',mLevel)
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
-  localStorage.setItem('start',start)
-  if (start) {
+  localStorage.setItem('aStart',aStart)
+  if (aStart) {
     setautoclick()
   }
 }
@@ -137,7 +137,7 @@ function reset() {
       aIncr = 0
       mLevel = 0
       aLevel = 0
-      start = false
+      aStart = false
       update()
   }
 }
@@ -162,8 +162,8 @@ function autobuy() {
       aLevel = aLevel + 1
       document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
       update()
-      if (!start) {
-        start = true
+      if (!aStart) {
+        aStart = true
         setautoclick()
       }
     }
