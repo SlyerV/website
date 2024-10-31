@@ -108,8 +108,6 @@ function aOnHover() {
     document.getElementById("autoup").style.backgroundColor = "#FF5F5F"
   } else if (document.getElementById("autoup").style.backgroundColor == "seagreen"){
     document.getElementById("autoup").style.backgroundColor = "#00CC00"
-  } else {
-    alert(document.getElementById("autoup").style.backgroundColor)
   }
 }
 function aOffHover() {
