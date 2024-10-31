@@ -55,6 +55,8 @@ function update() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
   document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
+  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('aIncr', aIncr);
   localStorage.setItem('mIncr',mIncr)
@@ -155,8 +157,8 @@ function autobuy() {
     document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
     update()
     if (start == false) {
-      setautoclick()
       start = true
+      setautoclick()
     }
   }
 }
