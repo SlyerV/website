@@ -106,13 +106,13 @@ function initupdate() {
   if (aStart) {
     setautoclick()
   }
-  if (mmStart) {
+  if (mmStart == true) {
     alert(mmStart)
     document.getElementById("multup").innerHTML = "MULTIPLIER PER SECOND: BOUGHT"
     document.getElementById("multup").style.backgroundColor = "red"
     setautomult()
   }
-  if (aaStart) {
+  if (aaStart == true) {
     document.getElementById("cpsup").innerHTML = "CPS PER SECOND: BOUGHT"
     document.getElementById("cpsup").style.backgroundColor = "red"
     setautocps()
