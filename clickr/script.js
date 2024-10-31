@@ -83,6 +83,8 @@ async function initupdate() {
   alert("4")
   await document.getElementById("manup")
   await document.getElementById("autoup")
+  alert(document.getElementById("manup"))
+  alert(document.getElementById("autoup"))
   try {
     document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
   } catch (err) {
