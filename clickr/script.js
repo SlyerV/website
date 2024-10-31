@@ -14,10 +14,12 @@ let mLevel = 0
 let aLevel = 0
 let mmStart = false
 let aaStart = false
-let mmIncr = 1
-let aaIncr = 1
+let mmIncr = 0
+let aaIncr = 0
 let mmChanged = false
 let aaChanged = false
+let mmCost = 2000000
+let aaCost = 5000000
 if (localStorage.getItem('clicks')!=null) {
   clicks = Number(localStorage.getItem('clicks'))
 }
@@ -42,6 +44,18 @@ if (localStorage.getItem('mCost')!=null) {
 if (localStorage.getItem('aStart')!=null) {
   aStart = localStorage.getItem('aStart')
 }
+if (localStorage.getItem('mmStart')!=null) {
+  mmStart = localStorage.getItem('mmStart')
+}
+if (localStorage.getItem('aaStart')!=null) {
+  aaStart = localStorage.getItem('aaStart')
+}
+if (localStorage.getItem('aaIncr')!=null) {
+  aaIncr = Number(localStorage.getItem('aaIncr'))
+}
+if (localStorage.getItem('mmIncr')!=null) {
+  mmIncr = Number(localStorage.getItem('mmIncr'))
+}
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
 const aCosts = [200, 500, 1000, 5000, 10000, 100000, 1000000, "N/A"]
@@ -63,6 +77,10 @@ function update() {
     localStorage.setItem('aCost',aCost)
     localStorage.setItem('mCost',mCost)
     localStorage.setItem('aStart',aStart)
+    localStorage.setItem('mmStart',mmStart)
+    localStorage.setItem('aaStart',aaStart)
+    localStorage.setItem('aaIncr', aaIncr)
+    localStorage.setItem('mmIncr',mmIncr)
   } catch (err) {
     alert(err)
   }
@@ -81,6 +99,10 @@ function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('aStart',aStart)
+  localStorage.setItem('mmStart',mmStart)
+  localStorage.setItem('aaStart',aaStart)
+  localStorage.setItem('aaIncr', aaIncr)
+  localStorage.setItem('mmIncr',mmIncr)
   if (aStart) {
     setauto(click)
   }
@@ -103,32 +125,18 @@ async function setauto(func) {
 function cHover() {
   sfxClick.load()
 }
-function mOnHover() {
-  if (document.getElementById("manup").style.backgroundColor == "red") {
-    document.getElementById("manup").style.backgroundColor = "#FF5F5F"
-  } else if (document.getElementById("manup").style.backgroundColor == "seagreen"){
-    document.getElementById("manup").style.backgroundColor = "#00CC00"
+function onHover(id) {
+  if (document.getElementById(id).style.backgroundColor == "red") {
+    document.getElementById(id).style.backgroundColor = "#FF5F5F"
+  } else if (document.getElementById(id).style.backgroundColor == "seagreen"){
+    document.getElementById(id).style.backgroundColor = "#00CC00"
   }
 }
-function mOffHover() {
-  if (document.getElementById("manup").style.backgroundColor == "rgb(0, 204, 0)") {
-    document.getElementById("manup").style.backgroundColor = "seagreen"
-  } else if (document.getElementById("manup").style.backgroundColor == "rgb(255, 95, 95)") {
-    document.getElementById("manup").style.backgroundColor = "red"
-  }
-}
-function aOnHover() {
-  if (document.getElementById("autoup").style.backgroundColor == "red") {
-    document.getElementById("autoup").style.backgroundColor = "#FF5F5F"
-  } else if (document.getElementById("autoup").style.backgroundColor == "seagreen"){
-    document.getElementById("autoup").style.backgroundColor = "#00CC00"
-  }
-}
-function aOffHover() {
-  if (document.getElementById("autoup").style.backgroundColor == "rgb(0, 204, 0)") {
-    document.getElementById("autoup").style.backgroundColor = "seagreen"
-  } else if (document.getElementById("autoup").style.backgroundColor == "rgb(255, 95, 95)") {
-    document.getElementById("autoup").style.backgroundColor = "red"
+function offHover(id) {
+  if (document.getElementById(id).style.backgroundColor == "rgb(0, 204, 0)") {
+    document.getElementById(id).style.backgroundColor = "seagreen"
+  } else if (document.getElementById(id).style.backgroundColor == "rgb(255, 95, 95)") {
+    document.getElementById(id).style.backgroundColor = "red"
   }
 }
 function rOnHover() {
@@ -185,6 +193,38 @@ function autobuy() {
     alert(err)
   }
 }
+function multbuy() {
+  try {
+    if ((clicks >= mmCost)) {
+      sfxLevelUp.play()
+      clicks = clicks-mmCost
+      mmIncr=1
+      update()
+      if (!mmStart) {
+        mmStart = true
+        setauto(mult)
+      }
+    }
+  } catch (err) {
+    alert(err)
+  }
+}
+function cpsbuy() {
+  try {
+    if ((clicks >= aaCost)) {
+      sfxLevelUp.play()
+      clicks = clicks-aaCost
+      aaIncr=1
+      update()
+      if (!aaStart) {
+        aaStart = true
+        setauto(cps)
+      }
+    }
+  } catch (err) {
+    alert(err)
+  }
+}
 async function bgchange() {
   while (true) {
     await sleep(1)
@@ -206,20 +246,20 @@ async function bgchange() {
         aChanged = true
       }
     }
-    if ((clicks > 1000000) && (mmChanged == true)) {
+    if ((clicks >= mmCost) && (mmChanged == true)) {
       document.getElementById("multup").style.backgroundColor = "seagreen";
       mmChanged = false
     } else {
-      if ((clicks < 1000000) && (mmChanged == false)) {
+      if ((clicks <= mmCost) && (mmChanged == false)) {
         document.getElementById("multup").style.backgroundColor = "red";
         mmChanged = true
       }
     }
-    if ((clicks > 10000000) && (aaChanged == true)) {
+    if ((clicks >= aaCost) && (aaChanged == true)) {
       document.getElementById("cpsup").style.backgroundColor = "seagreen";
       aaChanged = false
     } else {
-      if ((clicks < 10000000) && (aaChanged == false)) {
+      if ((clicks <= aaCost) && (aaChanged == false)) {
         document.getElementById("cpsup").style.backgroundColor = "red";
         aaChanged = true
       }
