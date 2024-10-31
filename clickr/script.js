@@ -158,15 +158,11 @@ function autobuy() {
       aIncr = aIncrs[aLevel]
       aLevel = aLevel + 1
       document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
+      update()
       if (!start) {
         start = true
-        alert("start = true")
-        update()
         setautoclick()
-      } else {
-        update()
       }
-      alert(start)
     }
   } catch (err) {
     alert(err)
