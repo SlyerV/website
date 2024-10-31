@@ -202,4 +202,5 @@ async function bgchange() {
   }
 }
 // INITIALIZATION
+window.onload = initupdate()
 bgchange()
