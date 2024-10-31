@@ -71,18 +71,23 @@ function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
+  alert("1")
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
+  alert("2")
   document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
+  alert("3")
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  alert("4")
   document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mIncrs[mLevel])+")"
+  alert("5")
   document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
-  await alert(mCost)
-  await alert(aCost)
-  await alert(mLevel)
-  await alert(aLevel)
+  alert(mCost)
+  alert(aCost)
+  alert(mLevel)
+  alert(aLevel)
   if (start) {
     setautoclick()
-    await alert("Tried to autoclick")
+    alert("Tried to autoclick")
   }
 }
 function cHover() {
