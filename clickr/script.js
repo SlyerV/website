@@ -202,5 +202,4 @@ async function bgchange() {
   }
 }
 // INITIALIZATION
-initupdate()
 bgchange()
