@@ -45,8 +45,8 @@
         class="upgrade"
         id=manup 
         onclick="manbuy()" 
-        onmouseover="mOnHover()" 
-        onmouseleave="mOffHover()"
+        onmouseover="onHover('manup')" 
+        onmouseleave="offHover('manup')"
         >Manual Upgrade! (Cost: 20, Multiplier: x1 → x2)
       </button>
       <button 
@@ -55,8 +55,8 @@
         class="upgrade"
         id=autoup 
         onclick="autobuy()"
-        onmouseover="aOnHover()"
-        onmouseleave="aOffHover()"
+        onmouseover="onHover('autoup')"
+        onmouseleave="offHover('autoup')"
         >Auto Upgrade! (Cost: 100, CPS: 0 → 1)</button>
     </div>    
     <div>
@@ -66,8 +66,8 @@
         class="upgrade"
         id=multup
         onclick="multbuy()"
-        onmouseover="mmOnHover()"
-        onmouseleave="mmOffHover()"
+        onmouseover="onHover('multup')"
+        onmouseleave="offHover('multup')"
         >Multiplier Per Second! (Cost: 1000000, +1x per sec)</button>
       <button 
         type="button" 
@@ -75,8 +75,8 @@
         class="upgrade"
         id=cpsup
         onclick="cpsbuy()"
-        onmouseover="aaOnHover()"
-        onmouseleave="aaOffHover()"
+        onmouseover="onHover('cpsup')"
+        onmouseleave="offHover('cpsup')"
         >CPS Per Second! (Cost: 10000000, +1 CPS per sec)</button>
     </div>
     <div>
