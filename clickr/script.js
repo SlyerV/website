@@ -76,7 +76,6 @@ function initupdate() {
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
   if (start) {
-    alert("Autoclick restored")
     setautoclick()
   }
 }
