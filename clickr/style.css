@@ -32,9 +32,7 @@ div h2 {
   margin-left: 30%;
   margin-right: 30%;
   font-family: Georgia, serif;
-  border-style: solid;
-  border-radius: 18px;
-  background-color: blue;
+  text-decoration: underline;
   color: white;
 }
 .button {
