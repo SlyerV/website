@@ -57,8 +57,10 @@ div h2 {
   margin-right: 30%;
 }
 #reset {
-  clear: both;
   background-color: dark-red;
+  height: 100px;
+  width: 150px;
+  font-size: 50px;
 }
 .upgrade {
   background-color: red;
