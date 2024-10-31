@@ -65,7 +65,6 @@ function update() {
   localStorage.setItem('start',start)
 }
 function initupdate() {
-  alert("0")
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('aIncr', aIncr);
   localStorage.setItem('mIncr',mIncr)
@@ -74,19 +73,14 @@ function initupdate() {
   localStorage.setItem('aCost',aCost)
   localStorage.setItem('mCost',mCost)
   localStorage.setItem('start',start)
-  try {
-    document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
-  } catch (err) {
-    alert(err)
-  }
+  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
+  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
+  document.getElementById("cps").innerHTML = "CPS: "+aIncr
+  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
   document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
-  alert(mCost)
-  alert(aCost)
-  alert(mLevel)
-  alert(aLevel)
   if (start) {
+    alert("Autoclick restored")
     setautoclick()
-    alert("Tried to autoclick")
   }
 }
 function cHover() {
