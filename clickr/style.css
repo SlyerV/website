@@ -52,6 +52,7 @@ div h2 {
   width: 250px;
   height: 150px;
   font-size: 50px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
   border-radius: 33%;
   margin-left: 30%;
   margin-right: 30%;
@@ -62,6 +63,7 @@ div h2 {
   text-align: center;
   width: 300px;
   font-size: 50px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 .upgrade {
   background-color: red;
