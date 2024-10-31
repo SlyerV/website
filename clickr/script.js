@@ -150,21 +150,25 @@ function manbuy() {
   }
 }
 function autobuy() {
-  if ((clicks > (aCost-1)) && (aIncrs[aLevel] != "MAX")) {
-    sfxLevelUp.play()
-    clicks = clicks-aCost
-    aCost = aCosts[aLevel]
-    aIncr = aIncrs[aLevel]
-    aLevel = aLevel + 1
-    document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
-    if (start == false) {
-      start = true
-      alert("start = true")
-      update()
-      setautoclick()
-    } else {
-      update()
+  try {
+    if ((clicks > (aCost-1)) && (aIncrs[aLevel] != "MAX")) {
+      sfxLevelUp.play()
+      clicks = clicks-aCost
+      aCost = aCosts[aLevel]
+      aIncr = aIncrs[aLevel]
+      aLevel = aLevel + 1
+      document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
+      if (start == false) {
+        start = true
+        alert("start = true")
+        update()
+        setautoclick()
+      } else {
+        update()
+      }
     }
+  } catch (err) {
+    alert(err)
   }
 }
 async function bgchange() {
