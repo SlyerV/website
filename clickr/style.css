@@ -41,7 +41,7 @@ div h2 {
   background-color: seagreen;
   color: white;
   transition-duration: 0.2s;
-  font-family: cursive;
+  font-family: DejaVu Sans Mono, monospace;
   border-radius: 12px;
   height: 33px;
 }
@@ -76,7 +76,7 @@ div h2 {
 }
 .stats {
   font-size: 18px;
-  font-family: cursive;
+  font-family: DejaVu Sans Mono, monospace;
   display:inline-block;
   text-align: center;
   border-style: solid;
