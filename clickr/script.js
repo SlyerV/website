@@ -34,7 +34,7 @@ if (localStorage.getItem('mCost')!=null) {
   mCost = Number(localStorage.getItem('mCost'))
 }
 if (localStorage.getItem('start')!=null) {
-  start = Number(localStorage.getItem('start'))
+  start = localStorage.getItem('start')
 }
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 const mCosts = [50, 100, 200, 500, 1000, 2000, 5000, 10000, 50000, 100000, 1000000, "N/A"]
@@ -158,7 +158,7 @@ function autobuy() {
       aIncr = aIncrs[aLevel]
       aLevel = aLevel + 1
       document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
-      if (start == false) {
+      if (!start) {
         start = true
         alert("start = true")
         update()
