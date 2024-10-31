@@ -65,6 +65,7 @@ function update() {
   localStorage.setItem('start',start)
 }
 function initupdate() {
+  alert("0")
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('aIncr', aIncr);
   localStorage.setItem('mIncr',mIncr)
