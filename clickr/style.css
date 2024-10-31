@@ -9,6 +9,15 @@ body {
   margin-right: 0px;
   padding: 0;
 }
+#navbar {
+  width: 100%;
+  margin-top: -5px;
+  border-bottom-style: dotted;
+  border-bottom-color: black;
+  background-color: #3772FF;
+  color: white;
+  font-family: DejaVu Sans Mono, monospace;
+}
 div h1 {
   text-align: center;
   width: 100%;
