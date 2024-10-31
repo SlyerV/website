@@ -57,14 +57,11 @@ div h2 {
   margin-right: 30%;
 }
 #reset {
-  background-color: dark-red;
-  text-align; center;
+  background-color: darkred;
   height: 100px;
+  text-align: center;
   width: 300px;
   font-size: 50px;
-  color: white;
-  transition-duration: 0.2s;
-  border-radius: 12px;
 }
 .upgrade {
   background-color: red;
