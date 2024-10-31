@@ -16,6 +16,8 @@ let mmStart = false
 let aaStart = false
 let mmIncr = 1
 let aaIncr = 1
+let mmChanged = false
+let aaChanged = false
 if (localStorage.getItem('clicks')!=null) {
   clicks = Number(localStorage.getItem('clicks'))
 }
@@ -202,6 +204,24 @@ async function bgchange() {
       if ((clicks < (aCost-1)) && (aChanged == false)) {
         document.getElementById("autoup").style.backgroundColor = "red";
         aChanged = true
+      }
+    }
+    if ((clicks > 1000000) && (mmChanged == true)) {
+      document.getElementById("multup").style.backgroundColor = "seagreen";
+      mmChanged = false
+    } else {
+      if ((clicks < 1000000) && (mmChanged == false)) {
+        document.getElementById("multup").style.backgroundColor = "red";
+        mmChanged = true
+      }
+    }
+    if ((clicks > 10000000) && (aaChanged == true)) {
+      document.getElementById("cpsup").style.backgroundColor = "seagreen";
+      aaChanged = false
+    } else {
+      if ((clicks < 10000000) && (aaChanged == false)) {
+        document.getElementById("cpsup").style.backgroundColor = "red";
+        aaChanged = true
       }
     }
   }
