@@ -76,13 +76,13 @@ function initupdate() {
   document.getElementById("cps").innerHTML = "CPS: "+aIncr
   document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mIncrs[mLevel])+")"
   document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aIncrs[aLevel])+")"
-  alert(mCost)
-  alert(aCost)
-  alert(mLevel)
-  alert(aLevel)
+  await alert(mCost)
+  await alert(aCost)
+  await alert(mLevel)
+  await alert(aLevel)
   if (start) {
     setautoclick()
-    alert("Tried to autoclick")
+    await alert("Tried to autoclick")
   }
 }
 function cHover() {
