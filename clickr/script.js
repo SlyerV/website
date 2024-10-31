@@ -176,6 +176,10 @@ function reset() {
       mLevel = 0
       aLevel = 0
       aStart = false
+      mmStart = false
+      aaStart = false
+      mmIncr = 0
+      aaIncr = 0
       update()
   }
 }
