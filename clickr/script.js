@@ -43,19 +43,23 @@ const mIncrs = [2, 3, 5, 10, 20, 50, 100, 200, 500, 1000, 5000, 10000, "MAX LEVE
 const aIncrs = [1, 2, 5, 10, 50, 100, 1000, 10000, "MAX LEVEL"]
 // FUNCTIONS
 function update() {
-  document.getElementById("clicks").innerHTML = "Clicks: "+clicks
-  document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
-  document.getElementById("cps").innerHTML = "CPS: "+aIncr
-  document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+(mNext)+")"
-  document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+(aNext)+")"
-  localStorage.setItem('clicks', clicks);
-  localStorage.setItem('aIncr', aIncr);
-  localStorage.setItem('mIncr',mIncr)
-  localStorage.setItem('aLevel',aLevel)
-  localStorage.setItem('mLevel',mLevel)
-  localStorage.setItem('aCost',aCost)
-  localStorage.setItem('mCost',mCost)
-  localStorage.setItem('start',start)
+  try {
+    document.getElementById("clicks").innerHTML = "Clicks: "+clicks
+    document.getElementById("mult").innerHTML = "Multiplier: x"+mIncr
+    document.getElementById("cps").innerHTML = "CPS: "+aIncr
+    document.getElementById("manup").innerHTML = "Manual Upgrade! (Cost: "+mCost+", Multiplier: x"+mIncr+" → x"+mIncrs[mLevel]+")"
+    document.getElementById("autoup").innerHTML = "Auto Upgrade! (Cost: "+aCost+", CPS: "+aIncr+" → "+aIncrs[aLevel]+")"
+    localStorage.setItem('clicks', clicks);
+    localStorage.setItem('aIncr', aIncr);
+    localStorage.setItem('mIncr',mIncr)
+    localStorage.setItem('aLevel',aLevel)
+    localStorage.setItem('mLevel',mLevel)
+    localStorage.setItem('aCost',aCost)
+    localStorage.setItem('mCost',mCost)
+    localStorage.setItem('start',start)
+  } catch (err) {
+    alert(err)
+  }
 }
 function initupdate() {
   document.getElementById("clicks").innerHTML = "Clicks: "+clicks
