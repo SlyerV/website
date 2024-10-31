@@ -181,6 +181,8 @@ function reset() {
       aaStart = false
       mmIncr = 0
       aaIncr = 0
+      document.getElementbyId("multup").innerHTML = "Multiplier Per Second! (Cost: 2000000, +1x per sec)"
+      document.getElementbyId("cpsup").innerHTML = "CPS Per Second! (Cost: 5000000, +1x per sec)"
       update()
   }
 }
