@@ -211,6 +211,8 @@ function multbuy() {
       sfxLevelUp.play()
       clicks = clicks-mmCost
       mmIncr=1
+      document.getElementById("multup").innerHTML = "MULTIPLIER PER SECOND: BOUGHT"
+      document.getElementById("multup").style.backgroundColor = "red"
       update()
       if (!mmStart) {
         mmStart = true
@@ -227,6 +229,8 @@ function cpsbuy() {
       sfxLevelUp.play()
       clicks = clicks-aaCost
       aaIncr=1
+      document.getElementById("cpsup").innerHTML = "CPS PER SECOND: BOUGHT"
+      document.getElementById("cpsup").style.backgroundColor = "red"
       update()
       if (!aaStart) {
         aaStart = true
@@ -258,22 +262,26 @@ async function bgchange() {
         aChanged = true
       }
     }
-    if ((clicks >= mmCost) && (mmChanged == true)) {
-      document.getElementById("multup").style.backgroundColor = "seagreen";
-      mmChanged = false
-    } else {
-      if ((clicks <= mmCost) && (mmChanged == false)) {
-        document.getElementById("multup").style.backgroundColor = "red";
-        mmChanged = true
+    if (!mmStart) {
+      if ((clicks >= mmCost) && (mmChanged == true)) {
+        document.getElementById("multup").style.backgroundColor = "seagreen";
+        mmChanged = false
+      } else {
+        if ((clicks <= mmCost) && (mmChanged == false)) {
+          document.getElementById("multup").style.backgroundColor = "red";
+          mmChanged = true
+        }
       }
     }
-    if ((clicks >= aaCost) && (aaChanged == true)) {
-      document.getElementById("cpsup").style.backgroundColor = "seagreen";
-      aaChanged = false
-    } else {
-      if ((clicks <= aaCost) && (aaChanged == false)) {
-        document.getElementById("cpsup").style.backgroundColor = "red";
-        aaChanged = true
+    if (!aaStart) {
+      if ((clicks >= aaCost) && (aaChanged == true)) {
+        document.getElementById("cpsup").style.backgroundColor = "seagreen";
+        aaChanged = false
+      } else {
+        if ((clicks <= aaCost) && (aaChanged == false)) {
+          document.getElementById("cpsup").style.backgroundColor = "red";
+          aaChanged = true
+        }
       }
     }
   }
