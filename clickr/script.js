@@ -103,6 +103,7 @@ function initupdate() {
   localStorage.setItem('aaStart',aaStart)
   localStorage.setItem('aaIncr', aaIncr)
   localStorage.setItem('mmIncr',mmIncr)
+  alert(mmStart)
   if (aStart) {
     setautoclick()
   }
