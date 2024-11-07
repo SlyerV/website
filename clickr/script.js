@@ -150,9 +150,9 @@ function onHover(id) {
   }
 }
 function offHover(id) {
-  if (document.getElementById(id).style.backgroundColor == "rgb(0, 204, 0)") {
+  if (document.getElementById(id).style.backgroundColor == "#00CC00") {
     document.getElementById(id).style.backgroundColor = "seagreen"
-  } else if (document.getElementById(id).style.backgroundColor == "rgb(255, 95, 95)") {
+  } else if (document.getElementById(id).style.backgroundColor == "#FF5F5F") {
     document.getElementById(id).style.backgroundColor = "red"
   }
 }
