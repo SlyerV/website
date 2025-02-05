@@ -1,2 +1,2 @@
 # website
-personal website hosted on netlify
+personal website
